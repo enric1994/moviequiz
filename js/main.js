@@ -8,14 +8,14 @@ init();
 animate();
 
 function init() {
-    width = 300;//window.innerWidth;
-    height = 300;//window.innerHeight;
+    width = window.innerWidth;
+    height = window.innerHeight;
 
     scene = new THREE.Scene();
 
     // Camera
     camera = new THREE.PerspectiveCamera(60, width / height, 0.01, 10000);
-    camera.position.set(40, 30, 30);
+    camera.position.set(40, 20, 30);
 
     // Background
     scene.background = new THREE.Color().setHSL(0.6, 0, 1);
@@ -23,8 +23,8 @@ function init() {
 
     // Lights
     const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.6);
-    hemiLight.color.setHSL(0.6, 1, 0.6);
-    hemiLight.groundColor.setHSL(0.095, 1, 0.75);
+    hemiLight.color.setHSL(0, 0, 1);
+    hemiLight.groundColor.setHSL(0, 0, 1);
     hemiLight.position.set(0, 50, 0);
     scene.add(hemiLight);
 
@@ -53,48 +53,48 @@ function init() {
     dirLight.shadow.camera.far = 3500;
     dirLight.shadow.bias = - 0.0001;
 
-    const dirLight2 = new THREE.DirectionalLight(0xffffff, 1);
-    // dirLight2.color.setHSL(0, 1, 0.95);
-    dirLight2.position.set( 1, -1.75, -1);
-    dirLight2.position.multiplyScalar(30);
-    scene.add(dirLight2);
+    // const dirLight2 = new THREE.DirectionalLight(0xffffff, 1);
+    // // dirLight2.color.setHSL(0, 1, 0.95);
+    // dirLight2.position.set( 1, -1.75, -1);
+    // dirLight2.position.multiplyScalar(30);
+    // scene.add(dirLight2);
 
-    dirLight2.castShadow = true;
+    // dirLight2.castShadow = true;
 
-    dirLight2.shadow.mapSize.width = 2048;
-    dirLight2.shadow.mapSize.height = 2048;
+    // dirLight2.shadow.mapSize.width = 2048;
+    // dirLight2.shadow.mapSize.height = 2048;
 
-    const d2 = -20;
+    // const d2 = -20;
 
-    dirLight2.shadow.camera.left = - d2;
-    dirLight2.shadow.camera.right = d2;
-    dirLight2.shadow.camera.top = d2;
-    dirLight2.shadow.camera.bottom = - d2;
+    // dirLight2.shadow.camera.left = - d2;
+    // dirLight2.shadow.camera.right = d2;
+    // dirLight2.shadow.camera.top = d2;
+    // dirLight2.shadow.camera.bottom = - d2;
 
-    dirLight2.shadow.camera.far = 3500;
-    dirLight2.shadow.bias = - 0.0001;
+    // dirLight2.shadow.camera.far = 3500;
+    // dirLight2.shadow.bias = - 0.0001;
 
     // const dirLightHelper = new THREE.DirectionalLightHelper(dirLight, 10);
     // scene.add(dirLightHelper);
 
     // Ground
 
-    // const plane = new THREE.Mesh(
-    //     new THREE.PlaneGeometry( 200, 200 ),
-    //     new THREE.MeshPhongMaterial( { color: 0x999999, specular: 0x101010 } )
-    // );
-    // plane.rotation.x = - Math.PI / 2;
-    // plane.position.y = -15;
-    // scene.add( plane );
+    const plane = new THREE.Mesh(
+        new THREE.PlaneGeometry( 100, 100 ),
+        new THREE.MeshPhongMaterial( { color: 0xffffff, specular: 0xffffff } )
+    );
+    plane.rotation.x = - Math.PI / 2;
+    plane.position.y = -10;
+    scene.add( plane );
 
-    // plane.receiveShadow = true;
+    plane.receiveShadow = true;
 
     // 3D model
 
     let loader = new THREE.GLTFLoader();
 
-    let scale = 13.0;
-    let url = "gltf/platform6.glb";
+    let scale = 5.0;
+    let url = "gltf/platform7.glb";
 
     loader.load(url, function (data) {
         gltf = data;
@@ -102,6 +102,17 @@ function init() {
         object.scale.set(scale, scale, scale);
         object.castShadow = true;
         object.receiveShadow = true;
+
+        gltf.scene.traverse( function ( object ) {
+
+            if ( object.isMesh ) {
+        
+                object.castShadow = true;
+                object.receiveShadow = true;
+        
+            }
+        
+        } );
 
         let animations = gltf.animations;
         if (animations && animations.length) {
@@ -126,11 +137,12 @@ function init() {
     controls.enableZoom = false;
     controls.userPanSpeed = 0.0;
     controls.maxDistance = 5000.0;
-    // controls.maxPolarAngle = Math.PI * 0.30;
-    // controls.minPolarAngle = Math.PI * 0.30;
+    controls.maxPolarAngle = Math.PI * 0.30;
+    controls.minPolarAngle = Math.PI * 0.30;
     controls.autoRotate = false;
     controls.autoRotateSpeed = -2.0;
 
+    renderer.setPixelRatio( window.devicePixelRatio );
     renderer.setSize(width, height);
     renderer.gammaOutput = true;
     document.body.appendChild(renderer.domElement);
