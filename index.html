@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css" />
     <title>Netflix 3D Quiz</title>
 </head>
+
 <body>
-    <h1>Netflix 3D Quiz</h1>
+    <div id="text">
+        3D cinema quiz
+    </div>
+    <a href="https://twitter.com/enric_moreu" target="_blank">by @enric_moreu</a>
+
+
+
     <div id="container"></div>
-    
+
 </body>
 
 <footer>
@@ -17,14 +25,24 @@
 </footer>
 
 <!-- three.min.js r102 -->
-<script src="https://rawcdn.githack.com/mrdoob/three.js/d9f87fb1a2c5db1ea0e2feda9bd42b39b5bedc41/build/three.min.js"></script>
+<script
+    src="https://rawcdn.githack.com/mrdoob/three.js/d9f87fb1a2c5db1ea0e2feda9bd42b39b5bedc41/build/three.min.js"></script>
 <!-- OrbitControls.js -->
-<script src="https://rawcdn.githack.com/mrdoob/three.js/d9f87fb1a2c5db1ea0e2feda9bd42b39b5bedc41/examples/js/controls/OrbitControls.js"></script>
+<script
+    src="https://rawcdn.githack.com/mrdoob/three.js/d9f87fb1a2c5db1ea0e2feda9bd42b39b5bedc41/examples/js/controls/OrbitControls.js"></script>
 <!-- DRACOLoader.js -->
-<script src="https://rawcdn.githack.com/mrdoob/three.js/d9f87fb1a2c5db1ea0e2feda9bd42b39b5bedc41/examples/js/loaders/DRACOLoader.js"></script>
+<script
+    src="https://rawcdn.githack.com/mrdoob/three.js/d9f87fb1a2c5db1ea0e2feda9bd42b39b5bedc41/examples/js/loaders/DRACOLoader.js"></script>
 <!-- GLTFLoader.js -->
-<script src="https://rawcdn.githack.com/mrdoob/three.js/d9f87fb1a2c5db1ea0e2feda9bd42b39b5bedc41/examples/js/loaders/GLTFLoader.js"></script>
+<script
+    src="https://rawcdn.githack.com/mrdoob/three.js/d9f87fb1a2c5db1ea0e2feda9bd42b39b5bedc41/examples/js/loaders/GLTFLoader.js"></script>
 
+<!-- Title 3D -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js'></script>
+<script>
+    $('#text').lettering()
+</script>
 
 <script src="js/main.js"></script>
 
