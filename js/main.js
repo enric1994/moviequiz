@@ -17,7 +17,7 @@ import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/thre
   
     // Creating the scene
     scene = new THREE.Scene();
-    scene.background = new THREE.Color("skyblue");
+    scene.background = new THREE.Color("#7abcff");
   
     createCamera();
     createLights();
@@ -36,7 +36,7 @@ import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/thre
     const aspect = container.clientWidth / container.clientHeight;
     const near = 0.01;
     const far = 10000;
-    camera = new THREE.PerspectiveCamera(fov, 1, near, far);
+    camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
     camera.position.set(-1.5, 1.5, 10);
   }
   
@@ -53,8 +53,8 @@ import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/thre
   
     const onLoad = (result, position) => {
       const model = result.scene;
-      model.position.copy(position);
-      model.scale.set(4,4,4);
+      // model.position.copy(position);
+      model.scale.set(3,3,3);
   
       const mixer = new THREE.AnimationMixer(model);
       mixers.push(mixer);
