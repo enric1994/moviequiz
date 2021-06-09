@@ -37,7 +37,7 @@ import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/thre
     const near = 0.01;
     const far = 10000;
     camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    camera.position.set(-1.5, 1.5, 10);
+    camera.position.set(4, 9, 12);
   }
   
   function createLights() {
@@ -82,7 +82,7 @@ import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/thre
     renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.gammaFactor = 2.2;
-    renderer.gammaOutput = true;
+    // renderer.gammaOutput = true;
     renderer.physicallyCorrectLights = true;
   
     container.appendChild(renderer.domElement);
