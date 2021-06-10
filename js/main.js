@@ -9,6 +9,7 @@ let renderer;
 let scene;
 let controls;
 
+var modelName = "gltf/steps2.glb";
 const mixers = [];
 const clock = new THREE.Clock();
 
@@ -21,7 +22,7 @@ function init() {
 
   createCamera();
   createLights();
-  loadModels();
+  loadModels(modelName);
   createControls();
   createRenderer();
 
@@ -33,10 +34,10 @@ function init() {
 
 function createCamera() {
   const fov = 60;
-  const aspect = container.clientWidth / container.clientHeight;
+  // const aspect = container.clientWidth / container.clientHeight;
   const near = 0.01;
   const far = 10000;
-  camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+  camera = new THREE.PerspectiveCamera(fov, 1, near, far);
   camera.position.set(4, 9, 12);
 }
 
@@ -48,7 +49,7 @@ function createLights() {
   scene.add(mainLight, hemisphereLight);
 }
 
-function loadModels() {
+function loadModels(modelName) {
   const loader = new GLTFLoader();
 
   const onLoad = (result, position) => {
@@ -59,7 +60,6 @@ function loadModels() {
     const mixer = new THREE.AnimationMixer(model);
     mixers.push(mixer);
 
-    // console.log(result.animations.length);
     var i;
     for (i = 0; i < result.animations.length; i++) {
 
@@ -73,10 +73,11 @@ function loadModels() {
 
   const onProgress = (progress) => { };
 
-  const parrotPosition = new THREE.Vector3(0, 0, 2.5);
+  const modelPosition = new THREE.Vector3(0, 0, 2.5);
+
   loader.load(
-    "gltf/steps2.glb",
-    (gltf) => onLoad(gltf, parrotPosition),
+    modelName,
+    (gltf) => onLoad(gltf, modelPosition),
     onProgress
   );
 
@@ -120,3 +121,13 @@ function onWindowResize() {
   renderer.setSize(container.clientWidth, container.clientHeight);
 }
 window.addEventListener("resize", onWindowResize, false);
+
+document.getElementById("submit").addEventListener("click", () => {
+  modelName = "gltf/platform8.glb";
+  console.log(modelName);
+  scene.clear();
+
+  createLights();
+  loadModels(modelName);
+  createControls();
+});

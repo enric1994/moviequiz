@@ -45,6 +45,9 @@
     text-transform: uppercase;
   }
 
+  #hint {
+    color: white;
+  }
 
   .subtitle a {
     color: white;
