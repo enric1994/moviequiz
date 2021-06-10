@@ -58,10 +58,15 @@ import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/thre
   
       const mixer = new THREE.AnimationMixer(model);
       mixers.push(mixer);
-  
-      const animation = result.animations[0];
+
+      // console.log(result.animations.length);
+      var i;
+      for (i = 0; i < result.animations.length; i++) {
+
+      const animation = result.animations[i];
       const action = mixer.clipAction(animation);
       action.play();
+      }
   
       scene.add(model);
     };
@@ -70,7 +75,7 @@ import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/thre
   
     const parrotPosition = new THREE.Vector3(0, 0, 2.5);
     loader.load(
-      "gltf/platform6.glb",
+      "gltf/steps2.glb",
       (gltf) => onLoad(gltf, parrotPosition),
       onProgress
     );
