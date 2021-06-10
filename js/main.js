@@ -122,12 +122,22 @@ function onWindowResize() {
 }
 window.addEventListener("resize", onWindowResize, false);
 
+// Quizz logic
+const questions = [
+  { 'file': 'gltf/steps2.glb', 'hint': 'Film from 1997', 'answers': ['harry', 'potter', 'philosopher'] },
+  { 'file': 'gltf/platform8.glb', 'hint': 'Film from 2018', 'answers': ['platform', 'hoyo'] },
+]
+var questions_count = 0;
+
 document.getElementById("submit").addEventListener("click", () => {
-  modelName = "gltf/platform8.glb";
-  console.log(modelName);
+  questions_count +=1;
+  console.log(questions[questions_count]);
+
+  document.getElementById("hint").innerHTML = questions[questions_count].hint;
+
   scene.clear();
 
   createLights();
-  loadModels(modelName);
+  loadModels(questions[questions_count].file);
   createControls();
 });
