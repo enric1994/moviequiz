@@ -9,7 +9,7 @@ let renderer;
 let scene;
 let controls;
 
-var modelName = "gltf/steps2.glb";
+var modelName = "gltf/spinner1.glb";
 const mixers = [];
 const clock = new THREE.Clock();
 
@@ -124,21 +124,28 @@ window.addEventListener("resize", onWindowResize, false);
 
 // Quizz logic
 const questions = [
+  { 'file': 'gltf/spinner1.glb', 'hint': 'Film from 2010', 'answers': ['inception', 'origen'] },
   { 'file': 'gltf/steps2.glb', 'hint': 'Film from 1997', 'answers': ['harry', 'potter', 'philosopher'] },
   { 'file': 'gltf/platform8.glb', 'hint': 'Film from 2018', 'answers': ['platform', 'hoyo'] },
-  { 'file': 'gltf/spinner1.glb', 'hint': 'Film from 2010', 'answers': ['inception', 'origen'] },
 ]
 var questions_count = 0;
 
 document.getElementById("submit-button").addEventListener("click", () => {
-  questions_count +=1;
-  console.log(questions[questions_count]);
 
-  document.getElementById("hint").innerHTML = questions[questions_count].hint;
+  var answer = document.getElementById("submit-text").value.split(' ');
 
-  scene.clear();
+  var intersection = answer.filter(function (n) {
+    return questions[questions_count]['answers'].indexOf(n) !== -1;
+  });
+  console.log(intersection);
+  if (intersection.length > 0) {
+    questions_count += 1;
+    document.getElementById("submit-text").value = '';
 
-  createLights();
-  loadModels(questions[questions_count].file);
-  createControls();
+    scene.clear();
+
+    createLights();
+    loadModels(questions[questions_count].file);
+    createControls();
+  }
 });
