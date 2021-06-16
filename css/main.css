@@ -46,7 +46,10 @@
   }
 
   #hint {
+    font-size: 5vh;
     color: white;
+    font-weight: bold;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
 
   .subtitle a {
@@ -58,11 +61,32 @@
   .col-centered{
     float: none;
     margin: 0 auto;
-}
-
+  }
+  
   #scene-container {
     width: 60vw;
     height: 60vw;
-    /* justify-content: center;
-    align-items: center; */
+    /* border-style: dashed;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 5px; */
+  }
+
+  #submit-text {
+    height: 3em;
+    margin-top: 1em;
+    border-radius: 5px;
+    background-color: #b8dcff;
+    border-color: transparent;
+    width: 50%;
+  }
+
+  #submit-button {
+    height: 3em;
+    margin: 0.5em;
+    border-radius: 5px;
+    background-color: #1c8dff;
+    color: white;
+    width: 50%;
+    border-color: black;
   }

@@ -126,10 +126,11 @@ window.addEventListener("resize", onWindowResize, false);
 const questions = [
   { 'file': 'gltf/steps2.glb', 'hint': 'Film from 1997', 'answers': ['harry', 'potter', 'philosopher'] },
   { 'file': 'gltf/platform8.glb', 'hint': 'Film from 2018', 'answers': ['platform', 'hoyo'] },
+  { 'file': 'gltf/spinner1.glb', 'hint': 'Film from 2010', 'answers': ['inception', 'origen'] },
 ]
 var questions_count = 0;
 
-document.getElementById("submit").addEventListener("click", () => {
+document.getElementById("submit-button").addEventListener("click", () => {
   questions_count +=1;
   console.log(questions[questions_count]);
 
