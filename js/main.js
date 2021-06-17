@@ -132,7 +132,7 @@ var questions_count = 0;
 
 document.getElementById("submit-button").addEventListener("click", () => {
 
-  var answer = document.getElementById("submit-text").value.split(' ');
+  var answer = document.getElementById("submit-text").value.toLowerCase().split(' ');
 
   var intersection = answer.filter(function (n) {
     return questions[questions_count]['answers'].indexOf(n) !== -1;
