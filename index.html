@@ -43,7 +43,7 @@
             <div class="col-md-1">
             </div>
             <div class="col-md-10">
-                <div id="hint">1. Film from 1997</div>
+                <div id="hint">1. Film from 2010</div>
             </div>
             <div class="col-md-1">
             </div>
@@ -66,10 +66,12 @@
             </div>
             <div class="col-md-10">
                 <form id="answer-input">
-                    <input id="submit-text" type="text" placeholder="E.g. Titanic"><br>
+                    <input id="submit-text" onkeydown="return event.key != 'Enter';" type="text"
+                        placeholder="E.g. Titanic" class="btn btn-secondary" data-container="body" data-toggle="popover"
+                        data-placement="top" data-content="Oops! Try again"><br>
                     <input id="submit-button" type="button" value="Submit">
                 </form>
-                
+
             </div>
             <div class="col-md-1">
             </div>
@@ -100,6 +102,14 @@
 <!-- <script src="js/jquery.min.js"></script> -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/scripts.js"></script>
+
+<!-- Init popover -->
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    });
+    $("#submit-text").popover("disable");
+</script>
 
 <!-- Three JS -->
 <script type="module" src="js/main.js"></script>
