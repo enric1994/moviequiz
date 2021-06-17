@@ -122,7 +122,19 @@
 <!-- Init popover -->
 <script>
     $(function () {
-        $('[data-toggle="popover"]').popover()
+        $('[data-toggle="popover"]').popover()({
+            delay: {
+            "show": 1000,
+            "hide": 4000
+        }
+        })
+    });
+    $('[data-toggle="popover"]').click(function () {
+        
+        setTimeout(function () {
+            $('.popover').fadeOut('slow');
+        }, 4000);
+
     });
     $("#submit-text").popover("disable");
 </script>
