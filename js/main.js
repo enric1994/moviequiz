@@ -144,14 +144,14 @@ document.getElementById("submit-button").addEventListener("click", () => {
     document.getElementById("feedback").style.color = 'green';
 
     scene.clear();
-    
+
     setTimeout(function () {
       document.getElementById("feedback").style.opacity = '0';
-      
+
       questions_count += 1;
       document.getElementById("submit-text").value = '';
       document.getElementById("hint").innerHTML = questions[questions_count]['hint'];
-      
+
       createLights();
       loadModels(questions[questions_count].file);
       createControls();
