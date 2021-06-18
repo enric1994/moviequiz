@@ -42,8 +42,8 @@ function createCamera() {
 }
 
 function createLights() {
-  const mainLight = new THREE.DirectionalLight(0xffffff, 5);
-  mainLight.position.set(10, 10, 10);
+  const mainLight = new THREE.DirectionalLight(0xffffff, 3);
+  mainLight.position.set(-1, 10, -18);
 
   const hemisphereLight = new THREE.HemisphereLight(0xddeeff, 0x202020, 5);
   scene.add(mainLight, hemisphereLight);
