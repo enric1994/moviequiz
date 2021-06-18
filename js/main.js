@@ -155,7 +155,8 @@ document.getElementById("submit-button").addEventListener("click", () => {
       createLights();
       loadModels(questions[questions_count].file);
       createControls();
-    }, 2000);
+      document.getElementById("tip").style.display = 'none';
+    }, 3000);
   } else {
     document.getElementById("feedback").style.opacity = '1';
     document.getElementById("feedback").style.color = 'red';

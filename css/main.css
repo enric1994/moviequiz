@@ -41,6 +41,13 @@ body {
   color: black;
   font-family: 'Fredoka One', cursive;
 }
+
+#tip {
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  padding-right: 7em;
+}
+
   @media only screen and (max-width: 600px) {
     h1{
       font-size: 3em;
@@ -49,8 +56,12 @@ body {
       font-size: 1.5em;
     }
     #hint {
-      margin-top: 1em;
+      margin-top: 0.2em;
       font-size: 1.5em;
+    }
+    #tip {
+      text-align: left;
+      /* padding-left: 5em; */
     }
   }
   
@@ -96,5 +107,7 @@ body {
     color: white;
     width: 50%;
     border-color: black;
-    border-width: 0.01em;
+    border-width: 1px;
   }
+
+ 
