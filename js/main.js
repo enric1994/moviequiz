@@ -139,19 +139,27 @@ document.getElementById("submit-button").addEventListener("click", () => {
   });
 
   if (intersection.length > 0) {
-    questions_count += 1;
-    document.getElementById("submit-text").value = '';
-    document.getElementById("hint").innerHTML = questions[questions_count]['hint'];
-
-    $("#submit-text").popover("disable");
+    document.getElementById("feedback").style.opacity = '1';
+    document.getElementById("feedback").innerHTML = 'Great! Next question';
+    document.getElementById("feedback").style.color = 'green';
 
     scene.clear();
-
-    createLights();
-    loadModels(questions[questions_count].file);
-    createControls();
+    
+    setTimeout(function () {
+      document.getElementById("feedback").style.opacity = '0';
+      
+      questions_count += 1;
+      document.getElementById("submit-text").value = '';
+      document.getElementById("hint").innerHTML = questions[questions_count]['hint'];
+      
+      createLights();
+      loadModels(questions[questions_count].file);
+      createControls();
+    }, 2000);
   } else {
-    $("#submit-text").popover("enable");
-    $("#submit-text").popover("show");
+    document.getElementById("feedback").style.opacity = '1';
+    document.getElementById("feedback").style.color = 'red';
+    document.getElementById("feedback").innerHTML = 'Oops, try again!';
+
   }
 });

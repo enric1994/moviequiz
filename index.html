@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lilita+One&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <!-- <script src="js/jquery.min.js"></script> -->
@@ -18,14 +18,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div id="text">
-                    3D cinema quiz
-                </div>
-                <!-- <div class="subtitle">
-                
-                <a href="https://twitter.com/enric_moreu" target="_blank">by @enric_moreu</a>
-            </div> -->
-
+                <h1>3D cinema quiz</h1>
             </div>
         </div>
 
@@ -53,6 +46,16 @@
             </div>
         </div>
 
+        <!-- Counter + hint -->
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                <div id="hint">1. Film from 2010</div>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
         
         <!-- 3D -->
         <div class="row">
@@ -65,26 +68,16 @@
             </div>
         </div>
         
-        <!-- Counter + hint -->
-        <div class="row">
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-10">
-                <div id="hint">1. Film from 2010</div>
-            </div>
-            <div class="col-md-1">
-            </div>
-        </div>
 
         <!-- Input -->
         <div class="row">
             <div class="col-md-1">
             </div>
             <div class="col-md-10">
+                <div id='feedback'>Oops, try again!</div>
                 <form id="answer-input">
                     <input id="submit-text" onkeydown="return event.key != 'Enter';" type="text"
-                        placeholder="E.g. Titanic" class="btn btn-secondary" data-container="body" data-toggle="popover"
-                        data-placement="top" data-content="Oops! Try again"><br>
+                        placeholder="E.g. Titanic" class="btn btn-secondary"><br>
                     <input id="submit-button" type="button" value="Submit">
                 </form>
 
@@ -109,35 +102,13 @@
 <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js'></script>
-<script>
-    $('#text').lettering()
-</script>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js'></script> -->
 
 <!-- Bootstrap -->
 <!-- <script src="js/jquery.min.js"></script> -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/scripts.js"></script>
 
-<!-- Init popover -->
-<script>
-    $(function () {
-        $('[data-toggle="popover"]').popover()({
-            delay: {
-            "show": 1000,
-            "hide": 4000
-        }
-        })
-    });
-    $('[data-toggle="popover"]').click(function () {
-        
-        setTimeout(function () {
-            $('.popover').fadeOut('slow');
-        }, 4000);
-
-    });
-    $("#submit-text").popover("disable");
-</script>
 
 <!-- Three JS -->
 <script type="module" src="js/main.js"></script>
