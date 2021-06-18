@@ -45,7 +45,7 @@ body {
 #tip {
   text-align: center;
   font-family: 'Indie Flower', cursive;
-  padding-right: 7em;
+  padding-right: 5em;
 }
 
   @media only screen and (max-width: 600px) {

@@ -99,6 +99,8 @@ function createControls() {
   controls.enableZoom = false;
   controls.maxPolarAngle = 1;
   controls.minPolarAngle = 1;
+  controls.enablePan = false;
+  controls.screenSpacePanning = false;
 }
 
 function update() {
