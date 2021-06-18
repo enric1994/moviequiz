@@ -46,25 +46,49 @@ body {
   text-align: center;
   font-family: 'Indie Flower', cursive;
   padding-right: 5em;
+  margin-right: 4em;
 }
 
   @media only screen and (max-width: 600px) {
-    h1{
-      font-size: 3em;
-    }
-    h2 {
-      font-size: 1.5em;
-    }
-    #hint {
-      margin-top: 0.2em;
-      font-size: 1.5em;
-    }
-    #tip {
-      text-align: left;
-      /* padding-left: 5em; */
-    }
+    
   }
   
+/* On telas that are 992px or less, set the background color to blue */
+@media screen and (max-width: 600px) {
+  h1{
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  #hint {
+    margin-top: 0.2em;
+    font-size: 1.5em;
+  }
+  #tip {
+    text-align: left;
+    /* padding-left: 5em; */
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 370px) {
+  h1{
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  #hint {
+    margin-top: 0.2em;
+    font-size: 1.5em;
+  }
+  #tip {
+    text-align: left;
+    display: none;
+  }
+}
+
   #feedback{
     opacity: 0;
     color: red;
