@@ -129,7 +129,8 @@ const questions = [
   { 'file': 'gltf/spinner1.glb', 'hint': '1. Film from 2010', 'answers': ['inception', 'origen'] },
   { 'file': 'gltf/steps2.glb', 'hint': '2. Film from 1997', 'answers': ['harry', 'potter', 'philosopher'] },
   { 'file': 'gltf/platform8.glb', 'hint': '3. Film from 2018', 'answers': ['platform', 'hoyo'] },
-  { 'file': 'gltf/dead_head.glb', 'hint': '4. Film from 1995', 'answers': ['se7en', 'seven', '7'] },
+  { 'file': 'gltf/spoon.glb', 'hint': '4. Film from 1999', 'answers': ['matrix', 'reloaded', 'revolution'] },
+  { 'file': 'gltf/dead_head.glb', 'hint': '5. Film from 1995', 'answers': ['se7en', 'seven', '7'] },
 ]
 var questions_count = 0;
 
