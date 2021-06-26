@@ -146,6 +146,9 @@ document.getElementById("submit-button").addEventListener("click", () => {
     document.getElementById("feedback").style.opacity = '1';
     document.getElementById("feedback").innerHTML = 'Great! Next question';
     document.getElementById("feedback").style.color = 'green';
+    document.getElementById("feedback").style.borderStyle = 'solid';
+    document.getElementById("feedback").style.borderRadius = '5px';
+    document.getElementById("feedback").style.color = 'green';
 
     scene.clear();
 

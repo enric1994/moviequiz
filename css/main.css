@@ -92,6 +92,7 @@ body {
   #feedback{
     opacity: 0;
     color: red;
+    margin-bottom: 5px;
   }
 
   .subtitle {
