@@ -131,6 +131,7 @@ const questions = [
   { 'file': 'gltf/platform8.glb', 'hint': '3. Film from 2018', 'answers': ['platform', 'hoyo'] },
   { 'file': 'gltf/spoon.glb', 'hint': '4. Film from 1999', 'answers': ['matrix', 'reloaded', 'revolution'] },
   { 'file': 'gltf/dead_head.glb', 'hint': '5. Film from 1995', 'answers': ['se7en', 'seven', '7'] },
+  { 'file': 'gltf/pottery.glb', 'hint': '6. Film from 1990', 'answers': ['ghost'] },
 ]
 var questions_count = 0;
 
