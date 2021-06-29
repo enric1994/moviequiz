@@ -28,8 +28,9 @@
     <link rel="icon"
         href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/movie-camera_1f3a5.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Indie+Flower&family=Lilita+One&display=swap"
-        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Indie+Flower&family=Exo:ital,wght@0,500;1,900&display=swap"
+        rel="stylesheet" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 
@@ -44,15 +45,117 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h1>3D cinema quiz</h1>
+                <div class="wrapper" id="title-h1">
+                    <div class="container">
+                        <h1>3D <br>Movie <br>Quiz</h1>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Description -->
+        <!-- Subtitle -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="subtitle">
+                        <h3>Guess the movie name!</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Counter + hint -->
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div id="quiz">
+
+                    <div class="col-md-10">
+                        <div id="hint">1. Film from 2010</div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+
+            <!-- 3D -->
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div id="canvas3d">
+
+                    <div class="col-md-10">
+                        <div class="col-centered" id="scene-container"></div>
+                    </div>
+                    <div id='tip'>
+                        swipe to rotate
+                        <svg xmlns="http://www.w3.org/2000/svg" width="85" height="40">
+                            <g fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-miterlimit="10">
+                                <path
+                                    d="M1.618 31.629c24.42.542 48.628 3.428 72.932 5.633.346-9.751.688-19.321 2.068-28.967" />
+                                <path
+                                    d="M69.854 12.22c3.721-2.325 4.348-6.603 7.402-9.481 1.046 3.027 3.443 9.07 6.125 11.113" />
+                            </g>
+                        </svg>
+
+                    </div>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+
+            <!-- Feedback -->
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <div id="feedback-info">
+                        <div id='feedback'>Oops, try again!</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+
+        <!-- Input -->
         <div class="row">
             <div class="col-md-1">
             </div>
             <div class="col-md-10">
+                <div id="question">
+
+                    <form id="answer-input">
+                        <input autocomplete="off" id="submit-text" onkeydown="return event.key != 'Enter';" type="text"
+                            placeholder="E.g. Titanic" class="btn btn-secondary"><br>
+                        <input id="submit-button" type="button" value="Submit">
+                    </form>
+
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </div>
+
+    <!-- Start button -->
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+            <button id="start-button" class="custom-btn btn-14"><span>Start</span></button>
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>
+    </div>
+
+    <!-- Description -->
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+            <div id="description">
                 <!-- <h2>Guess the title of the film</h2> -->
                 <h2><a href="https://enricmor.eu" target="_blank">by Enric Moreu</a>
                     <a href="https://github.com/enric1994" target="_blank">
@@ -72,70 +175,8 @@
 
                 </h2>
             </div>
-            <div class="col-md-1">
-            </div>
         </div>
-
-        <!-- Counter + hint -->
-        <div class="row">
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-10">
-                <div id="hint">1. Film from 2010</div>
-            </div>
-            <div class="col-md-1">
-            </div>
-        </div>
-
-        <!-- 3D -->
-        <div class="row">
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-10">
-                <div class="col-centered" id="scene-container"></div>
-                <div id='tip'>
-                    swipe to rotate
-                    <svg xmlns="http://www.w3.org/2000/svg" width="85" height="40">
-                        <g fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-miterlimit="10">
-                            <path
-                                d="M1.618 31.629c24.42.542 48.628 3.428 72.932 5.633.346-9.751.688-19.321 2.068-28.967" />
-                            <path
-                                d="M69.854 12.22c3.721-2.325 4.348-6.603 7.402-9.481 1.046 3.027 3.443 9.07 6.125 11.113" />
-                        </g>
-                    </svg>
-                </div>
-            </div>
-            <div class="col-md-1">
-            </div>
-        </div>
-
-        <!-- Feedback -->
-        <div class="row">
-            <div class="col-md-4">
-            </div>
-            <div class="col-md-4">
-                <div id='feedback'>Oops, try again!</div>
-            </div>
-            <div class="col-md-4">
-            </div>
-        </div>
-    </div>
-
-        <!-- Input -->
-        <div class="row">
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-10">
-                <form id="answer-input">
-                    <input id="submit-text" onkeydown="return event.key != 'Enter';" type="text"
-                        placeholder="E.g. Titanic" class="btn btn-secondary"><br>
-                    <input id="submit-button" type="button" value="Submit">
-                </form>
-
-            </div>
-            <div class="col-md-1">
-            </div>
+        <div class="col-md-1">
         </div>
     </div>
 

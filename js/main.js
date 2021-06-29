@@ -18,7 +18,7 @@ function init() {
 
   // Creating the scene
   scene = new THREE.Scene();
-  scene.background = new THREE.Color("#7abcff");
+  scene.background = new THREE.Color("black"); //("#7abcff");
 
   createCamera();
   createLights();
@@ -125,6 +125,22 @@ function onWindowResize() {
 window.addEventListener("resize", onWindowResize, false);
 
 // Quizz logic
+document.getElementById("start-button").addEventListener("click", () => {
+  setTimeout(function () {
+
+    document.getElementById("tip").style.display = 'block';
+    document.getElementById("quiz").style.display = 'contents';
+    document.getElementById("canvas3d").style.display = 'block';
+    document.getElementById("question").style.display = 'block';
+    document.getElementById("description").style.display = 'none';
+    document.getElementById("start-button").style.display = 'none';
+    document.getElementById("title-h1").style.display = 'none';
+    document.getElementById("subtitle").style.display = 'none';
+    document.getElementById("feedback-info").style.display = 'contents';
+    init();
+  }, 3000);
+});
+
 const questions = [
   { 'file': 'gltf/spinner1.glb', 'hint': '1. Film from 2010', 'answers': ['inception', 'origen'] },
   { 'file': 'gltf/steps2.glb', 'hint': '2. Film from 1997', 'answers': ['harry', 'potter', 'philosopher'] },
@@ -146,10 +162,9 @@ document.getElementById("submit-button").addEventListener("click", () => {
   if (intersection.length > 0) {
     document.getElementById("feedback").style.opacity = '1';
     document.getElementById("feedback").innerHTML = 'Great! Next question';
-    document.getElementById("feedback").style.color = 'green';
+    document.getElementById("feedback").style.color = '#06D6A0';
     document.getElementById("feedback").style.borderStyle = 'solid';
-    document.getElementById("feedback").style.borderRadius = '5px';
-    document.getElementById("feedback").style.color = 'green';
+    document.getElementById("feedback").style.color = '#06D6A0';
 
     scene.clear();
 
@@ -167,7 +182,9 @@ document.getElementById("submit-button").addEventListener("click", () => {
     }, 3000);
   } else {
     document.getElementById("feedback").style.opacity = '1';
-    document.getElementById("feedback").style.color = 'red';
+    document.getElementById("feedback").style.color = '#EF476F';
+    document.getElementById("feedback").style.borderStyle = 'solid';
+    document.getElementById("feedback").style.borderRadius = '#EF476F';
     document.getElementById("feedback").innerHTML = 'Oops, try again!';
 
   }

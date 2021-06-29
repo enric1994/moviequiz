@@ -1,44 +1,42 @@
-body {
-    background-color: #7abcff;
+html, body {
+    background-color: black;
+    /* #7abcff; */
     font-family: impact, arial;
     height: 100%;
     text-align: center;
     width: 100%;
+    margin: 0;
+    overflow: hidden;
   }
-
-  h1 {
-    font-family: 'Lilita One', cursive;
-    color: white;
-    margin-top: 0.2em;
-    margin-bottom: 0;
-    -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-    /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
-    font-size: 5em;
-  }
-  
 
   h2 a{
-    font-size: 0.6em;
-     color: black;
+    font-size: 0.8em;
+     color: #F8FFE5;
      text-decoration: none !important;
-     text-decoration-color: black;
+     text-decoration-color: #F8FFE5;
      font-family: 'Fredoka One', cursive;
      outline: 0;
 
   }
   a:visited {
-    color: black;
+    color: #F8FFE5;
   }
   a.underlined
 {
    text-decoration:underline;
 }
 
+h3 {
+  font-size: 1.5em;
+  color: #F8FFE5;
+  font-family: 'Exo';
+  font-weight: 500;
+}
+
 #hint {
   margin-top: 1em;
   font-size: 2em;
-  color: black;
+  color: #F8FFE5;
   font-family: 'Fredoka One', cursive;
 }
 
@@ -47,13 +45,14 @@ body {
   font-family: 'Indie Flower', cursive;
   padding-right: 5em;
   margin-right: 4em;
+  color: white;
 }
 
   @media only screen and (max-width: 600px) {
     
   }
   
-/* On telas that are 992px or less, set the background color to blue */
+/* On screens that are 992px or less: */
 @media screen and (max-width: 600px) {
   h1{
     font-size: 3em;
@@ -64,14 +63,14 @@ body {
   #hint {
     margin-top: 0.2em;
     font-size: 1.5em;
+    color: #F8FFE5;
   }
   #tip {
     text-align: left;
-    /* padding-left: 5em; */
   }
 }
 
-/* On screens that are 600px or less, set the background color to olive */
+/* On screens that are 600px or less: */
 @media screen and (max-width: 370px) {
   h1{
     font-size: 2.5em;
@@ -82,6 +81,7 @@ body {
   #hint {
     margin-top: 0.2em;
     font-size: 1.5em;
+    color: #F8FFE5;
   }
   #tip {
     text-align: left;
@@ -91,14 +91,15 @@ body {
 
   #feedback{
     opacity: 0;
-    color: red;
+    color: #EF476F;
     margin-bottom: 5px;
+    border-radius: 5px;
+    font-family: 'Exo';
   }
 
   .subtitle {
     color: white;
     font-size: 1em;
-    /* font-weight: 100; */
   }
   
   .col-centered{
@@ -109,30 +110,156 @@ body {
   #scene-container {
     width: 20em;
     height: 20em;
-    /* border-style: dashed;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 5px; */
   }
 
   #submit-text {
     height: 3em;
-    /* margin-top: 1em; */
     border-radius: 5px;
-    background-color: #b8dcff;
+    background-color: #F8FFE5;
     border-color: transparent;
     width: 50%;
+    font-family: 'Exo';
   }
 
   #submit-button {
     height: 3em;
     margin: 0.5em;
     border-radius: 5px;
-    background-color: #1c8dff;
-    color: white;
+    background-color: #FFC43D;
+    color: black;
     width: 50%;
     border-color: black;
     border-width: 1px;
+    font-family: 'Exo';
   }
 
- 
+ /* Multi-color title */
+
+:root {
+  --color-1: #06D6A0;
+  --color-2: #F8FFE5;
+  --color-3: #FFC43D;
+  --color-4: #EF476F;
+  --color-5: #1B9AAA;
+}
+
+
+.wrapper {
+  background: transparent;
+}
+
+h1 {
+  font-family: "Exo", sans-serif;
+  font-size: 4em;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: linear-gradient(191deg, 
+    var(--color-1) 19%, 
+    transparent 19%,transparent 20%, 
+    var(--color-2) 20%, var(--color-2)  39%,
+    transparent 39%,transparent 40%, 
+    var(--color-3) 40%,var(--color-3) 59% ,
+    transparent 59%,transparent 60%, 
+    var(--color-4) 60%, var(--color-4) 79%,
+    transparent 79%, transparent 80%, 
+    var(--color-5) 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.container {
+  padding: 1.5rem;   
+  text-align: center;
+}
+
+#quiz {
+  display: none;
+}
+
+#title-screen {
+  display: block;
+}
+
+#canvas3d {
+  display: none;
+}
+
+#question {
+  display: none;
+}
+#description {
+  display: block;
+   margin-top: 4em;
+}
+
+#feedback-info {
+  display: none;
+}
+
+/* Start button */
+
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+button {
+  margin: 20px;
+}
+.custom-btn {
+  width: 7em;
+  height: 2em;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+}
+
+
+
+/* 14 */
+.btn-14 {
+  font-family: 'Exo';
+  font-size: 2em;
+  color: #F8FFE5;
+  font-weight: 700;
+  background: #1B9AAA;
+  border: none;
+  z-index: 1;
+}
+.btn-14:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: #06D6A0;
+  background-image: linear-gradient(315deg, #FFC43D 0%, #EF476F 74%);
+  transition: all 2s ease;
+}
+.btn-14:hover {
+  color: #F8FFE5;
+}
+.btn-14:hover:after {
+  top: auto;
+  bottom: 0;
+  height: 100%;
+}
+.btn-14:active {
+  top: 2px;
+}
+
+*:focus {
+  outline: 0 !important;
+}
