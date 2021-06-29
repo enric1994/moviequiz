@@ -1,5 +1,5 @@
 html, body {
-    background-color: black;
+    background-color: #323238;
     /* #7abcff; */
     font-family: impact, arial;
     height: 100%;
@@ -37,7 +37,8 @@ h3 {
   margin-top: 1em;
   font-size: 2em;
   color: #F8FFE5;
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Exo';
+  font-weight: 500;
 }
 
 #tip {

@@ -18,7 +18,7 @@ function init() {
 
   // Creating the scene
   scene = new THREE.Scene();
-  scene.background = new THREE.Color("black"); //("#7abcff");
+  scene.background = new THREE.Color("#323238");
 
   createCamera();
   createLights();
