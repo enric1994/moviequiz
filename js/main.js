@@ -9,7 +9,7 @@ let renderer;
 let scene;
 let controls;
 
-var modelName = "gltf/spinner1.glb";
+var modelName = "gltf/axe.glb";
 const mixers = [];
 const clock = new THREE.Clock();
 
@@ -148,6 +148,7 @@ const questions = [
   { 'file': 'gltf/spoon.glb', 'hint': '4. Film from 1999', 'answers': ['matrix', 'reloaded', 'revolution'] },
   { 'file': 'gltf/dead_head.glb', 'hint': '5. Film from 1995', 'answers': ['se7en', 'seven', '7'] },
   { 'file': 'gltf/pottery.glb', 'hint': '6. Film from 1990', 'answers': ['ghost'] },
+  { 'file': 'gltf/axe.glb', 'hint': '7. Film from 1980', 'answers': ['shining','resplandor'] },
 ]
 var questions_count = 0;
 
