@@ -9,7 +9,7 @@ let renderer;
 let scene;
 let controls;
 
-var modelName = "gltf/axe.glb";
+var modelName = "gltf/spinner1.glb";
 const mixers = [];
 const clock = new THREE.Clock();
 
