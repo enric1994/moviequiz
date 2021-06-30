@@ -97,8 +97,8 @@ function createRenderer() {
 function createControls() {
   controls = new OrbitControls(camera, container);
   controls.enableZoom = false;
-  controls.maxPolarAngle = 1;
-  controls.minPolarAngle = 1;
+  controls.maxPolarAngle = 0.95;
+  controls.minPolarAngle = 0.95;
   controls.enablePan = false;
   controls.screenSpacePanning = false;
 }
