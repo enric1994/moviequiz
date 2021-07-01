@@ -149,6 +149,8 @@ const questions = [
   { 'file': 'gltf/dead_head.glb', 'hint': '5. Film from 1995', 'answers': ['se7en', 'seven', '7'] },
   { 'file': 'gltf/pottery.glb', 'hint': '6. Film from 1990', 'answers': ['ghost'] },
   { 'file': 'gltf/axe.glb', 'hint': '7. Film from 1980', 'answers': ['shining','resplandor'] },
+  { 'file': 'gltf/unicorn.glb', 'hint': '8. Film from 1982', 'answers': ['blade','runner'] },
+
 ]
 var questions_count = 0;
 
