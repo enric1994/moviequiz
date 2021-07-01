@@ -192,7 +192,7 @@ h1 {
 }
 #description {
   display: block;
-   margin-top: 4em;
+   /* margin-top: 4em; */
 }
 
 #feedback-info {
@@ -338,3 +338,22 @@ button {
     -webkit-clip-path: polygon(0% 100%, 6px 100%, 6px 100%, 6px 100%, 6px 100%, 6px 100%, 6px 100%, 6px 100%, 6px 100%, 0% 100%);
   }
 }
+
+/* Footer */
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:5em; /* this needs to be bigger than footer height*/
+}
+
+.footer {
+  position: relative;
+  margin-top: -4.5em; /* negative value of footer height */
+  height: 4.5em;
+  clear:both;
+  padding-top:1em;
+} 
