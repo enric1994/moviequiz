@@ -27,14 +27,13 @@ html, body {
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: #F8FFE5;
   font-family: 'Exo';
   font-weight: 500;
 }
 
 #hint {
-  margin-top: 1em;
   font-size: 2em;
   color: #F8FFE5;
   font-family: 'Exo';
@@ -45,50 +44,9 @@ h3 {
   text-align: center;
   font-family: 'Indie Flower', cursive;
   padding-right: 3em;
-  margin-right: 4em;
+  /* margin-right: 4em; */
   color: white;
   display: none;
-}
-
-  @media only screen and (max-width: 600px) {
-    
-  }
-  
-/* On screens that are 992px or less: */
-@media screen and (max-width: 600px) {
-  h1{
-    font-size: 3em;
-  }
-  h2 {
-    font-size: 1.5em;
-  }
-  #hint {
-    margin-top: 0.2em;
-    font-size: 1.5em;
-    color: #F8FFE5;
-  }
-  #tip {
-    text-align: left;
-  }
-}
-
-/* On screens that are 600px or less: */
-@media screen and (max-width: 370px) {
-  h1{
-    font-size: 2.5em;
-  }
-  h2 {
-    font-size: 1.3em;
-  }
-  #hint {
-    margin-top: 0.2em;
-    font-size: 1.5em;
-    color: #F8FFE5;
-  }
-  #tip {
-    text-align: left;
-    display: none;
-  }
 }
 
   #feedback{
@@ -152,10 +110,10 @@ h3 {
 
 h1 {
   font-family: "Exo", sans-serif;
-  font-size: 4em;
+  font-size: 6em;
   font-weight: 900;
   text-transform: uppercase;
-  background: linear-gradient(191deg, 
+  background: linear-gradient(171deg, 
     var(--color-1) 19%, 
     transparent 19%,transparent 20%, 
     var(--color-2) 20%, var(--color-2)  39%,
@@ -357,3 +315,51 @@ button {
   clear:both;
   padding-top:1em;
 } 
+
+
+/* On screens that are 600px or less: */
+@media screen and (max-width: 600px) {
+h1{
+  font-size: 4em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 2em;
+}
+#hint {
+  margin-top: 0.2em;
+  font-size: 1.5em;
+  color: #F8FFE5;
+}
+#tip {
+  text-align: left;
+}
+.btn-14{
+  font-size: 1.7em;
+}
+}
+
+/* On screens that are 370px or less: */
+@media screen and (max-width: 370px) {
+h1{
+  font-size: 3em;
+}
+h2 {
+  font-size: 1.3em;
+}
+h3 {
+  font-size: 1.7em;
+}
+#hint {
+  margin-top: 0.2em;
+  font-size: 1.5em;
+  color: #F8FFE5;
+}
+#tip {
+  text-align: left;
+  display: none;
+  padding-right: 1em;
+}
+}
