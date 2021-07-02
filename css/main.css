@@ -341,8 +341,8 @@ h3 {
 }
 }
 
-/* On screens that are 370px or less: */
-@media screen and (max-width: 370px) {
+/* On screens that are 400px or less: */
+@media screen and (max-width: 400px) {
 h1{
   font-size: 3em;
 }
@@ -361,5 +361,9 @@ h3 {
   text-align: left;
   display: none;
   padding-right: 1em;
+}
+#scene-container {
+  width: 15em;
+  height: 15em;
 }
 }
