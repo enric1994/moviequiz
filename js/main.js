@@ -150,6 +150,7 @@ const questions = [
   { 'file': 'gltf/pottery.glb', 'hint': '6. Film from 1990', 'answers': ['ghost'] },
   { 'file': 'gltf/axe.glb', 'hint': '7. Film from 1980', 'answers': ['shining','resplandor'] },
   { 'file': 'gltf/unicorn.glb', 'hint': '8. Film from 1982', 'answers': ['blade','runner'] },
+  { 'file': 'gltf/bed.glb', 'hint': '8. Film from 2001', 'answers': ['lord', 'rings', 'fellowship'] },
 
 ]
 var questions_count = 0;
