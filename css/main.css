@@ -33,6 +33,14 @@ h3 {
   font-weight: 500;
 }
 
+h4 {
+  margin-top: 1em;
+  font-size: 1.2em;
+  color: #F8FFE5;
+  font-family: 'Exo';
+  font-weight: 500;
+}
+
 #hint {
   font-size: 2em;
   color: #F8FFE5;
@@ -316,6 +324,14 @@ button {
   padding-top:1em;
 } 
 
+.share {
+  color: #F8FFE5;
+  text-align: center;
+  word-spacing: 1em;
+  margin-top: 1em;
+  text-decoration: none !important;
+  text-decoration-color: #F8FFE5;
+}
 
 /* On screens that are 600px or less: */
 @media screen and (max-width: 600px) {

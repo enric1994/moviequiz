@@ -164,6 +164,10 @@ document.getElementById("submit-button").addEventListener("click", () => {
   });
 
   if (intersection.length > 0) {
+    if (questions_count == questions.length -1){
+      window.location.href = '/congrats.html';
+    }
+
     document.getElementById("feedback").style.opacity = '1';
     document.getElementById("feedback").innerHTML = 'Great! Next question';
     document.getElementById("feedback").style.color = '#06D6A0';
