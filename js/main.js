@@ -175,6 +175,12 @@ document.getElementById("submit-button").addEventListener("click", () => {
     document.getElementById("feedback").style.borderStyle = 'solid';
     document.getElementById("feedback").style.color = '#06D6A0';
 
+    var url = "https://api.countapi.xyz/hit/moviequiz" + questions_count + ".enricmor.eu/visits"
+
+  fetch(url)
+  .then(response => response.json())
+  .then(data => console.log(data));
+
     scene.clear();
 
     setTimeout(function () {
