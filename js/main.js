@@ -13,7 +13,15 @@ var modelName = "gltf/spinner1.glb";
 const mixers = [];
 const clock = new THREE.Clock();
 
+var url="https://api.countapi.xyz/hit/moviequiz-hii.enricmor.eu/visits";
+
+fetch(url)
+.then(response => response.json())
+.then(data => null);
+
 function init() {
+
+
   container = document.querySelector("#scene-container");
 
   // Creating the scene
@@ -179,7 +187,7 @@ document.getElementById("submit-button").addEventListener("click", () => {
 
   fetch(url)
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => null);
 
     scene.clear();
 
