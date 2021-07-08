@@ -127,8 +127,9 @@ window.addEventListener("resize", onWindowResize, false);
 // Quizz logic
 document.getElementById("start-button").addEventListener("click", () => {
   setTimeout(function () {
-
-    document.getElementById("tip").style.display = 'block';
+    if(screen.width > 400) {
+      document.getElementById("tip").style.display = 'block';
+    }
     document.getElementById("quiz").style.display = 'contents';
     document.getElementById("canvas3d").style.display = 'block';
     document.getElementById("question").style.display = 'block';
