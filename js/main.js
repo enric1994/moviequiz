@@ -160,6 +160,7 @@ const questions = [
   { 'file': 'gltf/axe.glb', 'hint': '7. Movie from 1980', 'answers': ['shining','resplandor'] },
   { 'file': 'gltf/unicorn.glb', 'hint': '8. Movie from 1982', 'answers': ['blade','runner'] },
   { 'file': 'gltf/bed.glb', 'hint': '8. Movie from 2001', 'answers': ['lord', 'rings', 'fellowship'] },
+  { 'file': 'gltf/horse.glb', 'hint': '9. Movie from 1972', 'answers': ['godfather', 'padrino'] },
 
 ]
 var questions_count = 0;
