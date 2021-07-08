@@ -161,6 +161,7 @@ const questions = [
   { 'file': 'gltf/unicorn.glb', 'hint': '8. Movie from 1982', 'answers': ['blade','runner'] },
   { 'file': 'gltf/bed.glb', 'hint': '8. Movie from 2001', 'answers': ['lord', 'rings', 'fellowship'] },
   { 'file': 'gltf/horse.glb', 'hint': '9. Movie from 1972', 'answers': ['godfather', 'padrino'] },
+  { 'file': 'gltf/bone.glb', 'hint': '10. Movie from 1968', 'answers': ['space', 'odissey'] },
 
 ]
 var questions_count = 0;
