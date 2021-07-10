@@ -182,6 +182,9 @@ document.getElementById("submit-button").addEventListener("click", () => {
       window.location.href = '/congrats.html';
     }
 
+    document.getElementById("submit-button").disabled = true;
+
+
     document.getElementById("feedback").style.opacity = '1';
     document.getElementById("feedback").innerHTML = 'Great! Next question';
     document.getElementById("feedback").style.color = '#06D6A0';
@@ -207,6 +210,7 @@ document.getElementById("submit-button").addEventListener("click", () => {
       loadModels(questions[questions_count].file);
       createControls();
       document.getElementById("tip").style.display = 'none';
+      document.getElementById("submit-button").disabled = false;
     }, 3000);
   } else {
     document.getElementById("feedback").style.opacity = '1';
