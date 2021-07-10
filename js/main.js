@@ -9,7 +9,7 @@ let renderer;
 let scene;
 let controls;
 
-var modelName = "gltf/potatoes.glb";
+var modelName = "gltf/spinner1.glb";
 const mixers = [];
 const clock = new THREE.Clock();
 
@@ -164,6 +164,7 @@ const questions = [
   { 'file': 'gltf/bone.glb', 'hint': '10. Movie from 1968', 'answers': ['space', 'odissey'] },
   { 'file': 'gltf/potatoes.glb', 'hint': '10. Movie from 1925', 'answers': ['gold', 'rush', 'charlie', 'chaplin'] },
   { 'file': 'gltf/neuralyzer.glb', 'hint': '10. Movie from 1997', 'answers': ['men', 'black'] },
+  { 'file': 'gltf/empire.glb', 'hint': '10. Movie from 1933', 'answers': ['king', 'kong'] },
 ]
 var questions_count = 0;
 
