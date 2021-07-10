@@ -165,6 +165,7 @@ const questions = [
   { 'file': 'gltf/potatoes.glb', 'hint': '10. Movie from 1925', 'answers': ['gold', 'rush', 'charlie', 'chaplin'] },
   { 'file': 'gltf/neuralyzer.glb', 'hint': '10. Movie from 1997', 'answers': ['men', 'black'] },
   { 'file': 'gltf/empire.glb', 'hint': '10. Movie from 1933', 'answers': ['king', 'kong'] },
+  { 'file': 'gltf/ticket.glb', 'hint': '10. Movie from 2005', 'answers': ['charlie', 'chocolate', 'factory', 'willy', 'wonka'] },
 ]
 var questions_count = 0;
 
