@@ -163,6 +163,7 @@ const questions = [
   { 'file': 'gltf/horse.glb', 'hint': '9. Movie from 1972', 'answers': ['godfather', 'padrino'] },
   { 'file': 'gltf/bone.glb', 'hint': '10. Movie from 1968', 'answers': ['space', 'odissey'] },
   { 'file': 'gltf/potatoes.glb', 'hint': '10. Movie from 1925', 'answers': ['gold', 'rush', 'charlie', 'chaplin'] },
+  { 'file': 'gltf/neuralyzer.glb', 'hint': '10. Movie from 1997', 'answers': ['men', 'black'] },
 ]
 var questions_count = 0;
 
