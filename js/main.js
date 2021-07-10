@@ -9,7 +9,7 @@ let renderer;
 let scene;
 let controls;
 
-var modelName = "gltf/spinner1.glb";
+var modelName = "gltf/empire.glb";
 const mixers = [];
 const clock = new THREE.Clock();
 
@@ -151,21 +151,21 @@ document.getElementById("start-button").addEventListener("click", () => {
 });
 
 const questions = [
-  { 'file': 'gltf/spinner1.glb', 'hint': '1. Movie from 2010', 'answers': ['inception', 'origen'] },
-  { 'file': 'gltf/steps2.glb', 'hint': '2. Movie from 1997', 'answers': ['harry', 'potter', 'philosopher'] },
-  { 'file': 'gltf/platform8.glb', 'hint': '3. Movie from 2018', 'answers': ['platform', 'hoyo'] },
-  { 'file': 'gltf/spoon.glb', 'hint': '4. Movie from 1999', 'answers': ['matrix', 'reloaded', 'revolution'] },
-  { 'file': 'gltf/dead_head.glb', 'hint': '5. Movie from 1995', 'answers': ['se7en', 'seven', '7'] },
-  { 'file': 'gltf/pottery.glb', 'hint': '6. Movie from 1990', 'answers': ['ghost'] },
-  { 'file': 'gltf/axe.glb', 'hint': '7. Movie from 1980', 'answers': ['shining','resplandor'] },
-  { 'file': 'gltf/unicorn.glb', 'hint': '8. Movie from 1982', 'answers': ['blade','runner'] },
-  { 'file': 'gltf/bed.glb', 'hint': '8. Movie from 2001', 'answers': ['lord', 'rings', 'fellowship'] },
-  { 'file': 'gltf/horse.glb', 'hint': '9. Movie from 1972', 'answers': ['godfather', 'padrino'] },
-  { 'file': 'gltf/bone.glb', 'hint': '10. Movie from 1968', 'answers': ['space', 'odissey'] },
-  { 'file': 'gltf/potatoes.glb', 'hint': '10. Movie from 1925', 'answers': ['gold', 'rush', 'charlie', 'chaplin'] },
-  { 'file': 'gltf/neuralyzer.glb', 'hint': '10. Movie from 1997', 'answers': ['men', 'black'] },
-  { 'file': 'gltf/empire.glb', 'hint': '10. Movie from 1933', 'answers': ['king', 'kong'] },
-  { 'file': 'gltf/ticket.glb', 'hint': '10. Movie from 2005', 'answers': ['charlie', 'chocolate', 'factory', 'willy', 'wonka'] },
+  { 'file': 'gltf/empire.glb', 'hint': '1. Movie from 1933', 'answers': ['king', 'kong'] },
+  { 'file': 'gltf/axe.glb', 'hint': '2. Movie from 1980', 'answers': ['shining','resplandor'] },
+  { 'file': 'gltf/neuralyzer.glb', 'hint': '3. Movie from 1997', 'answers': ['men', 'black'] },
+  { 'file': 'gltf/spinner1.glb', 'hint': '4. Movie from 2010', 'answers': ['inception', 'origen'] },
+  { 'file': 'gltf/horse.glb', 'hint': '5. Movie from 1972', 'answers': ['godfather', 'padrino'] },
+  { 'file': 'gltf/ticket.glb', 'hint': '6. Movie from 2005', 'answers': ['charlie', 'chocolate', 'factory', 'willy', 'wonka'] },
+  { 'file': 'gltf/pottery.glb', 'hint': '7. Movie from 1990', 'answers': ['ghost'] },
+  { 'file': 'gltf/steps_bevel.glb', 'hint': '8. Movie from 1997', 'answers': ['harry', 'potter', 'philosopher'] },
+  { 'file': 'gltf/dead_head_bevel.glb', 'hint': '9. Movie from 1995', 'answers': ['se7en', 'seven', '7'] },
+  { 'file': 'gltf/bed.glb', 'hint': '10. Movie from 2001', 'answers': ['lord', 'rings', 'fellowship'] },
+  { 'file': 'gltf/unicorn.glb', 'hint': '11. Movie from 1982', 'answers': ['blade','runner'] },
+  { 'file': 'gltf/bone.glb', 'hint': '12. Movie from 1968', 'answers': ['space', 'odissey'] },
+  // { 'file': 'gltf/platform8.glb', 'hint': '3. Movie from 2018', 'answers': ['platform', 'hoyo'] },
+  // { 'file': 'gltf/spoon.glb', 'hint': '4. Movie from 1999', 'answers': ['matrix', 'reloaded', 'revolution'] },
+  // { 'file': 'gltf/potatoes.glb', 'hint': '10. Movie from 1925', 'answers': ['gold', 'rush', 'charlie', 'chaplin'] },
 ]
 var questions_count = 0;
 
