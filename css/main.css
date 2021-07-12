@@ -384,3 +384,37 @@ h3 {
   height: 15em;
 }
 }
+
+/* Spinner */
+.loader {
+  border: 16px solid #F8FFE5;
+  border-radius: 50%;
+  border-top: 16px solid #1B9AAA;
+  border-right: 16px solid #06D6A0;
+  border-bottom: 16px solid #EF476F;
+  border-left: 16px solid #FFC43D;
+  width: 4em;
+  height: 4em;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#spinner {
+  display: none;
+    position:absolute;
+    right: 0px;
+    top: 10em;
+    z-index: 9999;
+    width: 10em;
+    height: 1em;
+}

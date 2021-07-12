@@ -190,6 +190,10 @@ document.getElementById("submit-button").addEventListener("click", () => {
     document.getElementById("feedback").style.color = '#06D6A0';
     document.getElementById("feedback").style.borderStyle = 'solid';
     document.getElementById("feedback").style.color = '#06D6A0';
+    document.getElementById("spinner").style.display = 'block';
+    document.getElementById("scene-container").style.opacity = 0;
+    document.getElementById("quiz2").style.opacity = 0;
+    
 
     var url = "https://api.countapi.xyz/hit/moviequiz" + questions_count + ".enricmor.eu/visits"
 
@@ -211,6 +215,9 @@ document.getElementById("submit-button").addEventListener("click", () => {
       createControls();
       document.getElementById("tip").style.display = 'none';
       document.getElementById("submit-button").disabled = false;
+      document.getElementById("scene-container").style.opacity = 1;
+      document.getElementById("spinner").style.display = 'none';
+      document.getElementById("quiz2").style.opacity = 1;
     }, 3000);
   } else {
     document.getElementById("feedback").style.opacity = '1';

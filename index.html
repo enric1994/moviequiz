@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-                           <!-- ,---.
+<!-- ,---.
                           /    |
                          /     |
  I suppose you          /      |
@@ -30,9 +30,9 @@ think that was         /       |
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="3D Movie Quiz by Enric Moreu. Guess the title of 12 famous movies">
-  <meta name="keywords" content="quiz, movie, 3d">
-  <meta name="author" content="Enric Moreu">
+    <meta name="description" content="3D Movie Quiz by Enric Moreu. Guess the title of 12 famous movies">
+    <meta name="keywords" content="quiz, movie, 3d">
+    <meta name="author" content="Enric Moreu">
     <meta name="theme-color" content="#323238">
     <link rel="icon"
         href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/movie-camera_1f3a5.png" />
@@ -78,9 +78,14 @@ think that was         /       |
 
                     <div class="col-md-10">
                         <div id="quiz">
-                            <div class="animated-box in">
-                                <div id="hint">1. Movie from 1933</div>
+                            <div id="quiz2">
+                                <div class="animated-box in">
+                                    <div id="hint">1. Movie from 1933</div>
+                                </div>
                             </div>
+                        </div>
+                        <div id='spinner'>
+                            <div class="loader"></div>
                         </div>
                     </div>
                     <div class="col-md-1">
@@ -137,8 +142,8 @@ think that was         /       |
 
                             <form id="answer-input">
                                 <input autocomplete="off" id="submit-text" onkeydown="if (event.keyCode == 13)
-                                {document.getElementById('submit-button').click(); return false;}"
-                                    type="text" placeholder="E.g. Titanic" class="btn btn-secondary"><br>
+                                {document.getElementById('submit-button').click(); return false;}" type="text"
+                                    placeholder="E.g. Titanic" class="btn btn-secondary"><br>
                                 <input id="submit-button" type="button" value="Submit">
                             </form>
 
