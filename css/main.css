@@ -411,12 +411,10 @@ h3 {
 
 #spinner {
   display: none;
-    position:absolute;
-    right: 0px;
-    top: 10em;
-    z-index: 9999;
-    width: 10em;
-    height: 1em;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Fix iPhone input */
