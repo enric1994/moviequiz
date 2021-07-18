@@ -162,10 +162,10 @@ const questions = [
   { 'file': 'gltf/dead_head_bevel.glb', 'hint': '9. Movie from 1995', 'answers': ['se7en', 'seven', '7'] },
   { 'file': 'gltf/bed.glb', 'hint': '10. Movie from 2001', 'answers': ['lord', 'rings', 'fellowship', 'señor', 'anillos', 'comunidad'] },
   { 'file': 'gltf/unicorn.glb', 'hint': '11. Movie from 1982', 'answers': ['blade','runner'] },
-  { 'file': 'gltf/bone.glb', 'hint': '12. Movie from 1968', 'answers': ['space', 'odissey'] },
+  { 'file': 'gltf/potatoes.glb', 'hint': '12. Movie from 1925', 'answers': ['gold', 'rush', 'charlie', 'chaplin'] },
+  // { 'file': 'gltf/bone.glb', 'hint': '12. Movie from 1968', 'answers': ['space', 'odissey'] },
   // { 'file': 'gltf/platform8.glb', 'hint': '3. Movie from 2018', 'answers': ['platform', 'hoyo'] },
   // { 'file': 'gltf/spoon.glb', 'hint': '4. Movie from 1999', 'answers': ['matrix', 'reloaded', 'revolution'] },
-  // { 'file': 'gltf/potatoes.glb', 'hint': '10. Movie from 1925', 'answers': ['gold', 'rush', 'charlie', 'chaplin'] },
 ]
 var questions_count = 0;
 
