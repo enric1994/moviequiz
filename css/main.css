@@ -91,9 +91,9 @@ h4 {
 
   #submit-button {
     height: 3em;
-    /* margin: 0.5em; */
-    margin-right: 28px;
-    margin-top: 8px;
+    margin: 0.5em;
+    /* margin-right: 28px;
+    margin-top: 8px; */
     border-radius: 5px;
     background-color: #FFC43D;
     color: black;
