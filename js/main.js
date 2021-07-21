@@ -209,6 +209,7 @@ document.getElementById("submit-button").addEventListener("click", () => {
       questions_count += 1;
       document.getElementById("submit-text").value = '';
       document.getElementById("hint").innerHTML = questions[questions_count]['hint'];
+      $('[data-toggle="tooltip"]').attr("data-original-title",questions[questions_count]['hint']);
 
       createLights();
       loadModels(questions[questions_count].file);

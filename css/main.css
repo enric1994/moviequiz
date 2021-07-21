@@ -87,6 +87,7 @@ h4 {
     border-color: transparent;
     width: 50%;
     font-family: 'Exo';
+    color: #323238;
   }
 
   #submit-button {
@@ -96,9 +97,9 @@ h4 {
     margin-top: 8px; */
     border-radius: 5px;
     background-color: #FFC43D;
-    color: black;
+    color: #323238;
     width: 50%;
-    border-color: black;
+    border-color: #323238;
     border-width: 1px;
     font-family: 'Exo';
   }
@@ -373,7 +374,7 @@ h3 {
 }
 #hint {
   margin-top: 0.2em;
-  font-size: 1.5em;
+  font-size: 1.45em;
   color: #F8FFE5;
 }
 #tip {
@@ -431,6 +432,7 @@ input {
 
 .input-group .form-control {
   width: 100%;
+  padding: 0.3em;
 }
 
 .btn-secondary {
@@ -440,4 +442,37 @@ input {
     border-color: transparent;
     width: 50%;
     font-family: 'Exo';
+}
+
+.submit-box {
+  width: 70%;
+  margin: auto;
+}
+
+.tooltip-inner {
+  background-color: #323238;
+    color: #F8FFE5;
+    border: solid;
+    border-color: #1B9AAA;
+    border-width: 1px;
+  }
+  /* .tooltip.bs-tooltip-left .arrow:before {
+    background-color: #323238;
+    color: #F8FFE5;
+    border: solid;
+    border-color: #FFC43D;
+    border-width: 1px;
+  } */
+  .tooltip.show {
+    opacity: 1;
+  }
+  .tooltip {
+    font-family: 'Exo';
+    /* width: 15em; */
+  }
+  
+  .btn-secondary:hover {
+    color: #1B9AAA;
+    background-color: #1B9AAA;
+    border-color: #1B9AAA;
 }
