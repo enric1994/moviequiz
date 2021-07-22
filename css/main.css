@@ -388,6 +388,34 @@ h3 {
 }
 }
 
+/* On screens that are 400px or less: */
+@media screen and (max-width: 330px) {
+  h1{
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  h3 {
+    font-size: 1.7em;
+  }
+  #hint {
+    margin-top: 0.2em;
+    font-size: 1.25em;
+    color: #F8FFE5;
+  }
+  #tip {
+    text-align: left;
+    display: none;
+    padding-right: 1em;
+  }
+  #scene-container {
+    width: 15em;
+    height: 15em;
+  }
+  }
+
+
 /* Spinner */
 .loader {
   border: 16px solid #F8FFE5;
