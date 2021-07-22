@@ -134,6 +134,7 @@ window.addEventListener("resize", onWindowResize, false);
 
 // Quizz logic
 document.getElementById("start-button").addEventListener("click", () => {
+  document.getElementById("start-button").disabled = true;
   setTimeout(function () {
     if(screen.width > 400) {
       document.getElementById("tip").style.display = 'block';
