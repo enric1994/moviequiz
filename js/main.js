@@ -230,3 +230,48 @@ document.getElementById("submit-button").addEventListener("click", () => {
 
   }
 });
+
+document.getElementById("nextquestion").addEventListener("click", () => {
+
+    if (questions_count == questions.length - 1) {
+      window.location.href = '/congrats.html';
+    }
+
+    document.getElementById("nextquestion").style.pointerEvents = 'none';
+
+
+    document.getElementById("feedback").style.opacity = '1';
+    document.getElementById("feedback").innerHTML = 'Skipping...';
+    document.getElementById("feedback").style.color = '#F8FFE5';
+    document.getElementById("feedback").style.borderStyle = 'solid';
+    document.getElementById("spinner").style.display = 'block';
+    document.getElementById("scene-container").style.opacity = 0;
+    document.getElementById("quiz2").style.opacity = 0;
+
+
+    var url = "https://api.countapi.xyz/hit/moviequiz-q" + questions_count + ".enricmor.eu/visits"
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => null);
+
+    scene.clear();
+
+    setTimeout(function () {
+      document.getElementById("feedback").style.opacity = '0';
+
+      questions_count += 1;
+      document.getElementById("submit-text").value = '';
+      document.getElementById("hint").innerHTML = questions[questions_count]['hint'];
+      $('[data-toggle="tooltip"]').attr("data-original-title", questions[questions_count]['hint-button']);
+
+      createLights();
+      loadModels(questions[questions_count].file);
+      createControls();
+      document.getElementById("tip").style.display = 'none';
+      document.getElementById("nextquestion").style.pointerEvents = 'auto';
+      document.getElementById("scene-container").style.opacity = 1;
+      document.getElementById("spinner").style.display = 'none';
+      document.getElementById("quiz2").style.opacity = 1;
+    }, 3000);
+});
