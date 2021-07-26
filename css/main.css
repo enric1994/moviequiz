@@ -553,3 +553,7 @@ input {
   text-decoration: underline;
   font-family: 'Exo';
 }
+
+#guessed{
+  font-weight: bold;
+}

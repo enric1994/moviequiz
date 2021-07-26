@@ -169,7 +169,7 @@ const questions = [
   // { 'file': 'gltf/spoon.glb', 'hint': '4. Movie from 1999', 'answers': ['matrix', 'reloaded', 'revolution'] },
 ]
 var questions_count = 0;
-
+var guessed = 0;
 document.getElementById("submit-button").addEventListener("click", () => {
 
   var answer = document.getElementById("submit-text").value.toLowerCase().split(' ');
@@ -180,7 +180,8 @@ document.getElementById("submit-button").addEventListener("click", () => {
 
   if (intersection.length > 0) {
     if (questions_count == questions.length - 1) {
-      window.location.href = '/congrats.html';
+      window.location.href = '/congrats.html?g=' + guessed.toString();
+      // document.getElementById("guessed").innerHTML = guessed.toString();
     }
 
     document.getElementById("submit-button").disabled = true;
@@ -208,6 +209,7 @@ document.getElementById("submit-button").addEventListener("click", () => {
       document.getElementById("feedback").style.opacity = '0';
 
       questions_count += 1;
+      guessed +=1
       document.getElementById("submit-text").value = '';
       document.getElementById("hint").innerHTML = questions[questions_count]['hint'];
       $('[data-toggle="tooltip"]').attr("data-original-title", questions[questions_count]['hint-button']);
@@ -234,7 +236,8 @@ document.getElementById("submit-button").addEventListener("click", () => {
 document.getElementById("nextquestion").addEventListener("click", () => {
 
     if (questions_count == questions.length - 1) {
-      window.location.href = '/congrats.html';
+      window.location.href = '/congrats.html?g=' + guessed.toString();
+      // document.getElementById("guessed").innerHTML = guessed.toString();
     }
 
     document.getElementById("nextquestion").style.pointerEvents = 'none';
