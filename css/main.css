@@ -275,7 +275,7 @@ button {
 }
 
 .animated-box.in:after {
-  animation: frame-enter 1s forwards ease-in-out reverse, gradient-animation 4s ease-in-out infinite;
+  animation: frame-enter 1s forwards ease-in-out reverse, gradient-animation 8s ease-in-out infinite;
 }
 
 /* motion */

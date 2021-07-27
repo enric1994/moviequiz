@@ -148,7 +148,7 @@ document.getElementById("start-button").addEventListener("click", () => {
     document.getElementById("subtitle").style.display = 'none';
     document.getElementById("feedback-info").style.display = 'contents';
     init();
-  }, 3000);
+  }, 2000);
 });
 
 const questions = [
@@ -222,7 +222,7 @@ document.getElementById("submit-button").addEventListener("click", () => {
       document.getElementById("scene-container").style.opacity = 1;
       document.getElementById("spinner").style.display = 'none';
       document.getElementById("quiz2").style.opacity = 1;
-    }, 3000);
+    }, 2000);
   } else {
     document.getElementById("feedback").style.opacity = '1';
     document.getElementById("feedback").style.color = '#EF476F';
@@ -276,5 +276,5 @@ document.getElementById("nextquestion").addEventListener("click", () => {
       document.getElementById("scene-container").style.opacity = 1;
       document.getElementById("spinner").style.display = 'none';
       document.getElementById("quiz2").style.opacity = 1;
-    }, 3000);
+    }, 2000);
 });
