@@ -269,7 +269,7 @@ button {
   right: 0;
   bottom: 0;
   border-radius: 4px;
-  background: linear-gradient(120deg, #EF476F, #0575E6, #06D6A0);
+  background: linear-gradient(120deg, #F8FFE5, #F8FFE5, #F8FFE5);
   background-size: 300% 300%;
   clip-path: polygon(0% 100%, 6px 100%, 6px 6px, calc(100% - 6px) 6px, calc(100% - 6px) calc(100% - 6px), 6px calc(100% - 6px), 6px 100%, 100% 100%, 100% 0%, 0% 0%);
 }
